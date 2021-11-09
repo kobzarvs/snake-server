@@ -12,6 +12,8 @@ const server = app.listen(PORT, () => {
 
 const peerServer = ExpressPeerServer(server, {
   path: '/',
+  allow_discovery: true,
+  key: 'snake',
 });
 
 app.use('/', peerServer);
