@@ -18,7 +18,7 @@ const clients = new Map();
 
 app.use(express.static('public'));
 
-const server = app.listen(PORT, () => {
+const server = app.listen(PORT, '0.0.0.0',() => {
   console.log(`App listening on port http://localhost:${PORT}`);
   console.log('Press Ctrl+C to quit.');
 });
