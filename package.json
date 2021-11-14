@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "snake WebRTC server",
   "main": "src/server.js",
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "PORT=443 node src/server.js",
+    "start:dev": "PORT=9000 node src/server.js"
   },
   "repository": {
     "type": "git",
@@ -26,7 +30,14 @@
   },
   "homepage": "https://github.com/kobzarvs/snake-server#readme",
   "dependencies": {
+    "effector": "^22.1.2",
     "express": "^4.17.1",
-    "peer": "^0.6.1"
+    "http": "^0.0.1-security",
+    "peer": "^0.6.1",
+    "peerjs": "^1.3.2",
+    "simple-peer": "^9.11.0",
+    "simple-peer-server": "^0.0.8",
+    "socket.io": "^4.3.2",
+    "wrtc": "^0.4.7"
   }
 }
